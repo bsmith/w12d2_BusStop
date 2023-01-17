@@ -4,4 +4,9 @@ import org.junit.Before;
 import static org.junit.Assert.*;
 
 public class PersonTest {
+    @Test
+    public void canCreate() {
+        new Person();
+        assertTrue(true);
+    }
 }
