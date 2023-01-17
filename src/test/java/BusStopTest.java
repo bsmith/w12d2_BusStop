@@ -35,6 +35,12 @@ public class BusStopTest {
         assertEquals(1, busStop.queueLength());
     }
 
+    @Test
+    public void removeReturnsNullWhenStopEmpty() {
+        var p = busStop.remove();
+        assertNull(p);
+    }
+
     @Test(expected = AssertionError.class)
     public void queueIsFifo() {
         Person[] people = new Person[3];

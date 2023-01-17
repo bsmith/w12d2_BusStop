@@ -30,4 +30,12 @@ public class Bus {
         /* FIFO ordering */
         return this.passengers.remove(0);
     }
+
+    public void pickUp(BusStop busStop) {
+        if (this.numberOfPassengers() < this.capacity) {
+            var p = busStop.remove();
+            if (p != null && !this.addPassenger(p))
+                throw new RuntimeException("Adding passenger failed unexpectedly");
+        }
+    }
 }
