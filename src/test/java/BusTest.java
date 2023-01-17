@@ -37,8 +37,9 @@ public class BusTest {
         assertEquals(3, bus.numberOfPassengers());
     }
 
-    /* TODO: removing passengers not yet implemented */
-    @Test(expected = AssertionError.class)
+    /* removing passengers is now implemented */
+//    @Test(expected = AssertionError.class)
+    @Test
     public void canRemovePassenger() {
         bus.addPassenger(new Person());
         Object passenger = bus.removePassenger();

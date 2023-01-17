@@ -27,7 +27,7 @@ public class Bus {
     }
 
     public Person removePassenger() {
-        /* TODO: unimplemented */
-        return null;
+        /* FIFO ordering */
+        return this.passengers.remove(0);
     }
 }
