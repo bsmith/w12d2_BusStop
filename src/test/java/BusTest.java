@@ -56,7 +56,8 @@ public class BusTest {
         * bus has space, stop doesn't have passengers
      */
 
-    @Test(expected = AssertionError.class)
+//    @Test(expected = AssertionError.class)
+    @Test
     public void canPickUpPassenger() {
         busStop.add(new Person());
         bus.pickUp(busStop);
@@ -64,7 +65,8 @@ public class BusTest {
         assertEquals(1, bus.numberOfPassengers());
     }
 
-    @Test(expected = AssertionError.class)
+//    @Test(expected = AssertionError.class)
+    @Test
     public void cannotPickUpPassengerWhenBusFull() {
         busStop.add(new Person());
         /* capacity was set to 3 */

@@ -15,16 +15,17 @@ public class BusStop {
     }
 
     public int queueLength() {
-        /* TODO: unimplemented */
-        return 0;
+        return queue.size();
     }
 
     public void add(Person person) {
-        /* TODO: unimplemented */
+        queue.add(person);
     }
 
     public Person remove() {
-        /* TODO: unimplemented */
-        return null;
+        if (queue.size() > 0)
+            return queue.remove(0);
+        else
+            return null;
     }
 }

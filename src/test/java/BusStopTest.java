@@ -21,18 +21,20 @@ public class BusStopTest {
         assertEquals(0, busStop.queueLength());
     }
 
-    @Test(expected = AssertionError.class)
+//    @Test(expected = AssertionError.class)
+    @Test
     public void canAddPassenger() {
         busStop.add(new Person());
         assertEquals(1, busStop.queueLength());
     }
 
-    @Test(expected = AssertionError.class)
+//    @Test(expected = AssertionError.class)
+    @Test
     public void canRemovePassenger() {
         busStop.add(new Person());
         Person p = busStop.remove();
         assertNotNull(p);
-        assertEquals(1, busStop.queueLength());
+        assertEquals(0, busStop.queueLength());
     }
 
     @Test
@@ -41,7 +43,8 @@ public class BusStopTest {
         assertNull(p);
     }
 
-    @Test(expected = AssertionError.class)
+//    @Test(expected = AssertionError.class)
+    @Test
     public void queueIsFifo() {
         Person[] people = new Person[3];
         for (int idx = 0; idx < people.length; idx++)
